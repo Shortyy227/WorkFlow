@@ -1,3 +1,5 @@
+TEKRAR EDENLERİ KALDIR
+
 gau target.com | tee all_urls.txt
 waybackurls target.com >> all_urls.txt
 cat all_urls.txt | sort -u | tee unique_urls.txt
