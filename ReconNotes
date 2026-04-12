@@ -1,0 +1,23 @@
+gau target.com | tee all_urls.txt
+waybackurls target.com >> all_urls.txt
+cat all_urls.txt | sort -u | tee unique_urls.txt
+cat unique_urls.txt | grep -iE "\.(pdf|xls|xlsx|csv|doc|docx|json|xml|txt|bak|sql)(\?|$)"
+
+
+
+ Active crawling (5 levels deep)
+cat alive_urls.txt | katana -silent -d 5 -jc -kf \
+  -em js,png,jpg,css -o katana_urls.txt
+
+# Historical URLs from Wayback Machine
+waybackurls target.com | anew wayback_urls.txt
+
+# GAU (Get All URLs) - indexes multiple sources
+gau target.com | anew gau_urls.txt
+
+# Full spider with GoSpider
+gospider -s "https://target.com" -o gospider_out -t 20
+
+# Merge everything, remove noise
+cat *_urls.txt gospider_out/* | sort -u \
+  | grep -vE '\.(css|jpg|png)' | anew all_urls.txt
