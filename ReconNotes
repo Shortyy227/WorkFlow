@@ -5,7 +5,9 @@ waybackurls target.com >> all_urls.txt
 cat all_urls.txt | sort -u | tee unique_urls.txt
 cat unique_urls.txt | grep -iE "\.(pdf|xls|xlsx|csv|doc|docx|json|xml|txt|bak|sql)(\?|$)"
 
+Linkfinder 
 
+ python3 linkfinder.py -i https://example.com/static/js/main.c973efd1977f.js -r ^/ -o cli
 
  Active crawling (5 levels deep)
 cat alive_urls.txt | katana -silent -d 5 -jc -kf \
