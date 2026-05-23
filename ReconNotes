@@ -1,3 +1,5 @@
+python3 dirsearch.py -u https://example.com
+
 TEKRAR EDENLERİ KALDIR
 
 gau target.com | tee all_urls.txt
