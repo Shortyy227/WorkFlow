@@ -1,4 +1,5 @@
 python3 dirsearch.py -u https://example.com
+ReconX % python3 main.py --target example.com
 
 TEKRAR EDENLERİ KALDIR
 
