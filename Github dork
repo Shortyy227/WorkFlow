@@ -1,0 +1,18 @@
+org:"example" /"sk-[a-zA-Z0-9]{20,50}"/                                           # Hard-coded OpenAI API key
+org:"example" (AWS_ACCESS_KEY_ID OR AWS_ACCESS_SECRET_KEY)                        # Hard-coded AWS access & secret key
+org:"example" ("sk_live_" OR "pk_live_")                                          # Hard-coded Stripe secret keys
+org:"example" (SENDGRID_API_KEY OR sendgrid_api_key)                              # SendGrid API keys
+org:"example" (ANTHROPIC_API_KEY OR anthropic_api_key)                            # Anthropic API keys
+org:"example" (PAYPAL_CLIENT_SECRET OR paypal_client_secret)                      # PayPal credentials
+org:"example" (SQUARE_ACCESS_TOKEN OR square_access_token)                        # Square payment tokens
+org:"example" (AZURE_CLIENT_SECRET OR AZURE_CLIENT_ID)                            # Azure credentials
+org:"example" (CLOUDFLARE_API_TOKEN OR CF_API_TOKEN)                              # Cloudflare tokens
+org:"example" (filename:.env OR filename:.env.local OR filename:travis.yml)       # Configuration and build files
+org:"example" /http(s)?:\/\//                                                     # Hard-coded links
+org:"example" ("mongodb://" OR "mongodb+srv://" OR "mysql://")                    # Database connection strings
+org:"example" ("jwt_secret" OR "JWT_SECRET" OR "jwtSecret")                       # Authentication & security tokens
+org:"example" (extension:pem OR extension:key OR extension:p12 OR extension:pfx)  # Certificate files
+org:"example" (SLACK_BOT_TOKEN OR SLACK_WEBHOOK_URL)                              # Slack integration tokens
+org:"example" (GITHUB_TOKEN OR GITHUB_PAT OR GH_TOKEN)                            # GitHub personal access tokens
+org:"example" /\/\/(.*\.)?amazonaws\.com/                                         # AWS endpoints
+org:"example" /\/\/(.*\.)?firebaseio\.com/                                        # Firebase endpoints
