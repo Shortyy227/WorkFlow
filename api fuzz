@@ -1,0 +1,9 @@
+# Wayback Machine
+curl -s "http://web.archive.org/cdx/search/cdx?url=target.com/api/*&output=json" \
+  | jq -r '.[] | .[2]' | sort -u | grep -v "^ui\|^static\|^css\|^js"
+
+# Gau (getallurls)
+gau target.com | grep -E "(/api/|/v1/|/v2/|/graphql|/rest/)" | sort -u
+
+# Waybackurls
+waybackurls target.com | grep api | sort -u
