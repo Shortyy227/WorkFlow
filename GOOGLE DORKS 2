@@ -1,0 +1,6 @@
+  site:target.com "index of"
+  site:target.com "password"
+  site:target.com filetype:pdf
+  site:target.com intitle:"login"
+  site:target.com "api key"
+  
