@@ -1,0 +1,14 @@
+javascript:alert(1) → 403
+javascript:alert%28%29 → 403 (percent-encoded parens)
+javascript:%2528%2529 → 403 (double-encoded)
+javascript:eval(name) → 403
+javascript:Function(name)() → 403
+javascript:setTimeout(name) → 403
+javascript:[].constructor.constructor(name)() → 403
+javascript:({}).valueOf.constructor(name)() → 403
+javascript:new Function(name)() → 403
+javascript:document.body.innerHTML=… → 403
+javascript:location='https://…' → 403
+javascript:alert(1) → 403 (unicode escapes)
+java%E2%80%8Bscript:alert(1) → 403 (zero-width space)
+java%C0%80script:alert(1) → 403 (overlong UTF-8)
