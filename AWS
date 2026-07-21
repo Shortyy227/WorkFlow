@@ -1,0 +1,20 @@
+aws s3 ls s3://bucket_name --no-sign-request
+-------------------------
+
+-----GİTHUB DORKS 
+
+org:target "amazonaws"
+org:target "bucket_name"
+org:target "aws_access_key"
+org:target "aws_access_key_id"
+org:target "aws_key"
+org:target "aws_secret"
+org:target "aws_secret_key"
+org:target "S3_BUCKET"
+
+
+------GOOGLE DORKS
+
+site:s3.amazonaws.com "target.com"
+site:*.s3.amazonaws.com "target.com"
+site:s3-external-1.amazonaws.com "target.com"
