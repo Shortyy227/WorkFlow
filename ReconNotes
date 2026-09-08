@@ -1,6 +1,17 @@
 python3 dirsearch.py -u https://example.com
 ReconX % python3 main.py --target example.com
 
+# Subdomain discovery
+subfinder -d target.com
+assetfinder --subs-only target.com
+amass enum -d target.com
+
+# Resolve them
+dnsx -l subs.txt -a -cname -resp
+
+# Wildcard detection
+dig random123.target.com
+
 TEKRAR EDENLERİ KALDIR
 
 gau target.com | tee all_urls.txt
